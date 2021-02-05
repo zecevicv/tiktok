@@ -4,55 +4,55 @@
 	font-family: 'ploni';
 	font-weight: 800; /*(ultrabold)*/
 	font-style: normal;
-	src: url('../font/ploni/ploni-ultrabold-aaa.woff2') format('woff2'), url('../font/ploni/ploni-ultrabold-aaa.woff') format('woff');
+	src: url('../font/ploni-ultrabold-aaa.woff2') format('woff2'), url('../font/ploni-ultrabold-aaa.woff') format('woff');
 }
 @font-face{
 	font-family: 'ploni';
 	font-weight: 200; /*(ultralight)*/
 	font-style: normal;
-	src: url('../font/ploni/ploni-ultralight-aaa.woff2') format('woff2'), url('../font/ploni/ploni-ultralight-aaa.woff') format('woff');
+	src: url('../font/ploni-ultralight-aaa.woff2') format('woff2'), url('../font/ploni-ultralight-aaa.woff') format('woff');
 }
 
 @font-face{
 	font-family: 'ploni';
 	font-weight: 700; /*(bold)*/
 	font-style: normal;
-	src: url('../font/ploni/ploni-bold-aaa.woff2') format('woff2'), url('../font/ploni/ploni-bold-aaa.woff') format('woff');
+	src: url('../font/ploni-bold-aaa.woff2') format('woff2'), url('../font/ploni-bold-aaa.woff') format('woff');
 }
 
 @font-face{
 	font-family: 'ploni';
 	font-weight: 600; /*(demibold)*/
 	font-style: normal;
-	src: url('../font/ploni/ploni-demibold-aaa.woff2') format('woff2'), url('../font/ploni/ploni-demibold-aaa.woff') format('woff');
+	src: url('../font/ploni-demibold-aaa.woff2') format('woff2'), url('../font/ploni-demibold-aaa.woff') format('woff');
 }
 
 @font-face{
 	font-family: 'ploni';
 	font-weight: 300; /*(light)*/
 	font-style: normal;
-	src: url('../font/ploni/ploni-light-aaa.woff2') format('woff2'), url('../font/ploni/ploni-light-aaa.woff') format('woff');
+	src: url('../font/ploni-light-aaa.woff2') format('woff2'), url('../font/ploni-light-aaa.woff') format('woff');
 }
 
 @font-face{
 	font-family: 'ploni';
 	font-weight: 500; /*(medium)*/
 	font-style: normal;
-	src: url('../font/ploni/ploni-medium-aaa.woff2') format('woff2'), url('../font/ploni/ploni-medium-aaa.woff') format('woff');
+	src: url('../font/ploni-medium-aaa.woff2') format('woff2'), url('../font/ploni-medium-aaa.woff') format('woff');
 }
 
 @font-face{
 	font-family: 'ploni';
 	font-weight: 400; /*(regular)*/
 	font-style: normal;
-	src: url('../font/ploni/ploni-regular-aaa.woff2') format('woff2'), url('../font/ploni/ploni-regular-aaa.woff') format('woff');
+	src: url('../font/ploni-regular-aaa.woff2') format('woff2'), url('../font/ploni-regular-aaa.woff') format('woff');
 }
 
 @font-face{
 	font-family: 'ploni';
 	font-weight: 900; /*(black)*/
 	font-style: normal;
-	src: url('../font/ploni/ploni-black-aaa.woff2') format('woff2'), url('../font/ploni/ploni-black-aaa.woff') format('woff');
+	src: url('../font/ploni-black-aaa.woff2') format('woff2'), url('../font/ploni-black-aaa.woff') format('woff');
 }
 
 /* #Variables
@@ -194,8 +194,45 @@ button {
   }
 } */
 
+.ultra-light {
+  font-weight: 200 !important;
+}
+
+.light {
+  font-weight: 200 !important;
+}
+
+.regular {
+  font-weight: 300 !important;
+}
+
+.medium {
+  font-weight: 500 !important;
+}
+
+.demi-bold {
+  font-weight: 600 !important;
+}
+
 .bold {
-  font-weight: bold !important;
+  font-weight: 700 !important;
+}
+
+.ultra-bold {
+  font-weight: 800 !important;
+}
+
+.black {
+  font-weight: 900 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'sofia-pro';
 }
 
 /* #Buttons & Links
@@ -295,3 +332,9 @@ button {
     height: 4.13vw;
   }
 } */
+
+/* #Header
+================================================== */
+
+/* #Footer
+================================================== */
