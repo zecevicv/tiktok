@@ -1,3 +1,60 @@
+/* #Font
+================================================== */
+@font-face{
+	font-family: 'ploni';
+	font-weight: 800; /*(ultrabold)*/
+	font-style: normal;
+	src: url('../font/ploni/ploni-ultrabold-aaa.woff2') format('woff2'), url('../font/ploni/ploni-ultrabold-aaa.woff') format('woff');
+}
+@font-face{
+	font-family: 'ploni';
+	font-weight: 200; /*(ultralight)*/
+	font-style: normal;
+	src: url('../font/ploni/ploni-ultralight-aaa.woff2') format('woff2'), url('../font/ploni/ploni-ultralight-aaa.woff') format('woff');
+}
+
+@font-face{
+	font-family: 'ploni';
+	font-weight: 700; /*(bold)*/
+	font-style: normal;
+	src: url('../font/ploni/ploni-bold-aaa.woff2') format('woff2'), url('../font/ploni/ploni-bold-aaa.woff') format('woff');
+}
+
+@font-face{
+	font-family: 'ploni';
+	font-weight: 600; /*(demibold)*/
+	font-style: normal;
+	src: url('../font/ploni/ploni-demibold-aaa.woff2') format('woff2'), url('../font/ploni/ploni-demibold-aaa.woff') format('woff');
+}
+
+@font-face{
+	font-family: 'ploni';
+	font-weight: 300; /*(light)*/
+	font-style: normal;
+	src: url('../font/ploni/ploni-light-aaa.woff2') format('woff2'), url('../font/ploni/ploni-light-aaa.woff') format('woff');
+}
+
+@font-face{
+	font-family: 'ploni';
+	font-weight: 500; /*(medium)*/
+	font-style: normal;
+	src: url('../font/ploni/ploni-medium-aaa.woff2') format('woff2'), url('../font/ploni/ploni-medium-aaa.woff') format('woff');
+}
+
+@font-face{
+	font-family: 'ploni';
+	font-weight: 400; /*(regular)*/
+	font-style: normal;
+	src: url('../font/ploni/ploni-regular-aaa.woff2') format('woff2'), url('../font/ploni/ploni-regular-aaa.woff') format('woff');
+}
+
+@font-face{
+	font-family: 'ploni';
+	font-weight: 900; /*(black)*/
+	font-style: normal;
+	src: url('../font/ploni/ploni-black-aaa.woff2') format('woff2'), url('../font/ploni/ploni-black-aaa.woff') format('woff');
+}
+
 /* #Variables
 ================================================== */
 :root {
@@ -5,15 +62,10 @@
 
 /* #Global
 ================================================== */
-html {
-  /*scroll-behavior: smooth;*/
-}
-
 body {
-  font-family: 'Heebo', sans-serif;
+  font-family: 'ploni', sans-serif;
   font-weight: 400;
   line-height: 1.3;
-  color: var(--color-primary-dark);
 }
 
 body.no-scroll {
@@ -92,35 +144,35 @@ button {
   }
 }
 
-.text-primary {
-  color: var(--color-primary) !important;
-}
-
 /* #Typography
 ================================================== */
 /* Font Desktop (f-d) */
 .f-d-1 {
-  font-size: 0.72vw !important;
+  font-size: 0.93vw !important; /* 18px */
 }
 
 .f-d-2 {
-  font-size: 0.88vw !important;
+  font-size: 1.04vw !important; /* 20px */
 }
 
 .f-d-3 {
-  font-size: 1.04vw !important;
+  font-size: 1.35vw!important; /* 26px */
 }
 
 .f-d-4 {
-  font-size: 1.562vw !important;
+  font-size: 1.56vw !important; /* 30px */
 }
 
 .f-d-5 {
-  font-size: 2.604vw !important;
+  font-size: 2.08vw !important; /* 40px */
+}
+
+.f-d-6 {
+  font-size: 4.16vw !important; /* 80px */
 }
 
 /* Font Mobile (f-m) */
-@media (max-width: 1023.98px) {
+/* @media (max-width: 1023.98px) {
   .f-m-1 {
     font-size: 2.75vw !important;
   }
@@ -140,7 +192,7 @@ button {
   .f-m-5 {
     font-size: 6.75vw !important;
   }
-}
+} */
 
 .bold {
   font-weight: bold !important;
@@ -149,13 +201,7 @@ button {
 /* #Buttons & Links
 ================================================== */
 .link {
-  border-bottom: 2px solid transparent;
   transition: border .5s ease;
-}
-
-.link:hover,
-.link.active {
-  border-bottom: 2px solid var(--color-primary);
 }
 
 .btn {
@@ -169,35 +215,11 @@ button {
   transition: border .5s ease, background-color .5s ease;
 }
 
-.btn-primary {
-  color: white;
-  background-color: var(--color-primary);
-  font-weight: bold;
-}
-
-.btn-primary-outline {
-  border: 1px solid white;
-}
-
-.btn-primary-outline:hover {
-  background-color: rgba(255, 255, 255, .1);
-}
-
-.btn-secondary {
-  border: 1px solid var(--color-primary);
-}
-
-.btn-secondary:hover,
-.btn-secondary.active {
-  background-color: var(--color-primary);
-  color: white;
-}
-
-@media (max-width: 1023.98px) {
+/* @media (max-width: 1023.98px) {
   .btn {
     height: 10vw;
   }
-}
+} */
 
 /* #Swiper Navigation
 ================================================== */
@@ -248,31 +270,7 @@ button {
   transform: rotate(180deg);
 }
 
-.swiper-navigation .swiper-pagination {
-  position: static;
-  margin-top: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.swiper-navigation .swiper-pagination-bullet {
-  width: 0.52vw;
-  height: 0.52vw;
-  margin: 0 0.36vw;
-  background: var(--color-primary-dark);
-  opacity: .33;
-}
-
-.swiper-navigation.swiper-navigation-white .swiper-pagination-bullet {
-  background-color: white;
-}
-
-.swiper-navigation .swiper-pagination-bullet-active {
-  opacity: 1;
-}
-
-@media (max-width: 1023.98px) {
+/* @media (max-width: 1023.98px) {
   .swiper-navigation {
     min-height: 4.13vw;
   }
@@ -296,10 +294,4 @@ button {
     width: 5vw;
     height: 4.13vw;
   }
-
-  .swiper-navigation .swiper-pagination-bullet {
-    width: 1.33vw;
-    height: 1.33vw;
-    margin: 0 1vw;
-  }
-}
+} */
