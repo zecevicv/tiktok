@@ -6,6 +6,7 @@
 	font-style: normal;
 	src: url('../font/ploni-ultrabold-aaa.woff2') format('woff2'), url('../font/ploni-ultrabold-aaa.woff') format('woff');
 }
+
 @font-face{
 	font-family: 'ploni';
 	font-weight: 200; /*(ultralight)*/
@@ -58,6 +59,8 @@
 /* #Variables
 ================================================== */
 :root {
+  --color-tiktok-blue: #25F4EE;
+  --color-tiktok-red: #FB2C54;
 }
 
 /* #Global
@@ -122,6 +125,10 @@ button {
 
 /* #Utilities
 ================================================== */
+.container {
+  margin: 0 auto;
+}
+
 .d-desktop {
   display: block;
 }
@@ -235,10 +242,15 @@ h6 {
   font-family: 'sofia-pro';
 }
 
+.text-red {
+  color: var(--color-tiktok-red)!important;
+}
+
 /* #Buttons & Links
 ================================================== */
+a,
 .link {
-  transition: border .5s ease;
+  transition: all .3s ease;
 }
 
 .btn {
@@ -246,10 +258,36 @@ h6 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 2.6vw;
+  height: 3.125vw;
   border: 1px solid transparent;
-  padding: 0 1.15vw;
-  transition: border .5s ease, background-color .5s ease;
+  border-radius: 20px;
+  padding: 0 3.5vw;
+  transition: all .3s ease;
+  font-size: 1.35vw!important;
+  font-weight: 700;
+}
+
+.btn-primary {
+  color: white;
+  background-color: var(--color-tiktok-red);
+}
+
+.btn-secondary {
+  color: white;
+  background-color: black;
+}
+
+.btn-tertiary {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.btn-large {
+  height: 5.2vw;
+  font-size: 2.08vw!important;
+  padding: 0 5.2vw;
+  border: 1px solid transparent;
 }
 
 /* @media (max-width: 1023.98px) {
@@ -262,11 +300,6 @@ h6 {
 ================================================== */
 .swiper-navigation {
   position: relative;
-  min-height: 1.6vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .swiper-navigation .swiper-button-next,
@@ -280,17 +313,17 @@ h6 {
 }
 
 .swiper-navigation .swiper-button-next {
-  right: 40%;
+  right: 0;
 }
 
 .swiper-navigation .swiper-button-prev {
-  left: 40%;
+  left: 0;
 }
 
 .swiper-navigation .swiper-button-next:after,
 .swiper-navigation .swiper-button-prev:after {
   width: 2vw;
-  height: 1.6vw;
+  height: 3.5vw;
   content: '';
   background-image: url('../img/icons/right-arrow-black.svg');
   background-size: contain;
@@ -335,6 +368,107 @@ h6 {
 
 /* #Header
 ================================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #131313;
+  color: white;
+  z-index: 1000;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 92%;
+}
+
+.header-hamburger {
+  display: none;
+}
+
+.header-logo {
+  margin-bottom: 0.35vw;
+}
+
+.header-logo img {
+  width: 13.4vw;
+}
+
+.header-links {
+  display: flex;
+}
+
+.header-links li:not(:last-child) {
+  margin-left: 2.6vw;
+}
+
+.header-links a {
+  display: block;
+  border-top: 0.3vw solid transparent;
+  border-bottom: 0.3vw solid transparent;
+  padding: 0.35vw 0;
+}
+
+.header-links a:hover {
+  border-top: 0.3vw solid var(--color-tiktok-blue);
+}
+
 
 /* #Footer
 ================================================== */
+.footer {
+  background-color: #242424;
+  color: white;
+  padding: 5.2vw 0 4.7vw 0;
+}
+
+.footer .container {
+  width: 92%;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  flex: 0 0 11.5vw;
+  margin-bottom: 1.87vw;
+}
+
+.footer-social {
+  display: flex;
+}
+
+.footer-social li {
+  width: 2.4vw;
+}
+
+.footer-social li:not(:last-child) {
+  margin-left: .8vw;
+}
+
+.footer-links {
+  display: flex;
+  line-height: 1.8;
+}
+
+.footer-links ul:not(:last-child) {
+  margin-left: 4.7vw;
+}
+
+.footer-links a {
+  border-bottom: 0.3vw solid transparent;
+  backface-visibility: hidden;
+}
+
+.footer-links a:hover {
+  border-bottom: 0.3vw solid var(--color-tiktok-blue);
+}
+
+.footer-bottom {
+  opacity: .5;
+}

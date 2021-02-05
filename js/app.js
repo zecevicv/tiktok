@@ -31,6 +31,10 @@ window.addEventListener('load', () => {
   const getInspiredSlider = document.querySelector('.get-inspired .swiper-container');
   new Swiper(getInspiredSlider, {
     slidesPerView: 1,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+    },
     breakpoints: {
       0: {
         slidesPerView: 1
@@ -48,6 +52,7 @@ window.addEventListener('load', () => {
   // Home - News Slider
   new Swiper('.news .swiper-container', {
     slidesPerView: 3,
+    simulateTouch: false,
     breakpoints: {
       0: {
         slidesPerView: 3

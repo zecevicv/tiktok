@@ -1,0 +1,273 @@
+/* #Hero
+================================================== */
+.hero {
+  margin-top: 49.5vw;
+  background-color: white;
+}
+
+.hero-video {
+  width: 100%;
+  height: 49.5vw;
+}
+
+.hero-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* #Grow
+================================================== */
+.grow {
+  position: relative;
+  text-align: center;
+}
+
+.grow .bg-img,
+.grow .bg-img img {
+  width: 100%;
+}
+
+.grow .container {
+  width: 58%;
+
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.grow h1 {
+  margin: 0 auto 4.25vw auto;
+  max-width: 70%;
+  line-height: 1;
+}
+
+.grow p {
+  line-height: 1.3;
+}
+
+.grow p:first-of-type {
+  margin-bottom: 2vw;
+}
+
+.grow p:last-of-type {
+  line-height: 1.4;
+}
+
+/* #How To
+================================================== */
+.how-to {
+  background-color: var(--color-tiktok-blue);
+  padding: 6vw 0 8.85vw 0;
+}
+
+.how-to .container {
+  max-width: 78%;
+}
+
+.how-to h2 {
+  text-align: center;
+  margin-bottom: 4.4vw;
+}
+
+.how-to .media-block {
+  display: grid;
+  grid-template-columns: 5.5fr 4.5fr;
+  align-items: center;
+  column-gap: 6vw;
+}
+
+.how-to video {
+  width: 100%;
+}
+
+.how-to p {
+  line-height: 1.25;
+  margin-bottom: 2.6vw;
+}
+
+/* #Why
+================================================== */
+.why {
+  text-align: center;
+  position: relative;
+}
+
+.why .container {
+  width: 88%;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.why .bg-img,
+.why .bg-img img {
+  width: 100%;
+}
+
+.why h2 {
+  margin-bottom: 5.2vw;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10vw;
+  row-gap: 5.25vw;
+}
+
+.why h3 {
+  margin-bottom: 1vw;
+}
+
+.why p {
+  line-height: 1.8;
+}
+
+/* #Get Inspired
+================================================== */
+.get-inspired {
+  padding: 3.5vw 0 4.15vw 0;
+  background-color: var(--color-tiktok-blue);
+  text-align: center;
+}
+
+.get-inspired h2 {
+  margin-bottom: 4.15vw;
+}
+
+.get-inspired .slider {
+  margin-bottom: 3.65vw;
+  position: relative;
+}
+
+.get-inspired .swiper-container {
+  width: 64%;
+  border-radius: 20px;
+}
+
+.get-inspired .swiper-container img {
+  width: 100%;
+}
+
+.get-inspired .swiper-navigation {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.get-inspired .swiper-navigation .swiper-button-next {
+  right: 12%;
+}
+
+.get-inspired .swiper-navigation .swiper-button-prev {
+  left: 12%;
+}
+
+/* #News
+================================================== */
+.news {
+  padding: 4vw 0 6.25vw 0;
+  text-align: center;
+  background-color: white;
+}
+
+.news h2 {
+  margin-bottom: 5.2vw;
+}
+
+.news .slider {
+  text-align: right;
+  margin: 0 auto 5.2vw auto;
+  width: 78%;
+}
+
+.news .swiper-slide {
+  height: auto;
+}
+
+.news .swiper-slide a {
+  display: flex;
+  height: 100%;
+}
+
+.news .swiper-slide .img {
+  flex: 0 0 40%;
+}
+
+.news .swiper-slide .img img {
+  width: 100%;
+  height: 100%;
+}
+
+.news .swiper-slide .text {
+  max-width: 10.4vw;
+  padding-right: 1vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.news .swiper-slide .text p:first-child {
+  margin-bottom: 1.45vw;
+}
+
+.news .swiper-slide .text p:last-child {
+  margin-top: auto;
+}
+
+/* #Start
+================================================== */
+.start {
+  padding: 4vw 0 6.25vw 0;
+  background-color: var(--color-tiktok-red);
+  color: white;
+  text-align: center;
+}
+
+.start p {
+  width: 51%;
+  margin: 2.35vw auto;
+}
+
+/* #Subscribe
+================================================== */
+.subscribe {
+  padding: 6.3vw 0 6.77vw 0;
+  text-align: center;
+  background-color: white;
+}
+
+.subscribe p {
+  margin-bottom: 1.8vw;
+}
+
+.subscribe .form input {
+  height: 3.125vw;
+  width: 32.2vw;
+  margin-left: 1.56vw;
+  border: 1px solid black;
+  color: black;
+  border-radius: 20px;
+  padding-right: 1.5vw;
+  transition: all .3s ease;
+}
+
+.subscribe .form input:focus {
+  box-shadow: inset 0 0 1px 1px black;
+}
+
+.subscribe .form input::placeholder {
+  color: black;
+}
