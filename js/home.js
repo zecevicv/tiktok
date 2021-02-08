@@ -74,7 +74,7 @@ ScrollTrigger.create({
 // Returning to video 1
 ScrollTrigger.create({
   trigger: heroVideo1,
-  end: "100% 5%",
+  end: "100% 2%",
   onEnterBack: () => { 
     goToSection(heroVideo1, 1);
     heroAnimationTop.restart();
@@ -87,7 +87,7 @@ ScrollTrigger.create({
   trigger: heroVideo2,
   end: "100% 60%",
   onEnterBack: () => { 
-    goToSection(heroVideo2, 1.25)
+    goToSection(heroVideo2, .5)
   }
 });
 
