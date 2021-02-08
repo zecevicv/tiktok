@@ -1,13 +1,25 @@
 /* #Hero
 ================================================== */
 .hero {
-  margin-top: 49.5vw;
   background-color: white;
+  position: relative;
 }
 
 .hero-video {
   width: 100%;
-  height: 49.5vw;
+  height: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.hero-video.overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: 1;
 }
 
 .hero-video video {
@@ -17,11 +29,59 @@
   object-position: center;
 }
 
-.hero-video-bg {
+.hero-video-text {
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 67%;
+}
+
+.hero-video-text h2 {
+  font-size: 2.6vw!important;
+  font-family: 'ploni';
+  line-height: 1;
+  margin-bottom: 3.2vw;
+}
+
+.hero-video-text a,
+.hero-video-text button {
+  font-size: 1.56vw!important;
+  height: 4vw;
+}
+
+.hero-animation-top,
+.hero-animation-bottom {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -1;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+}
+
+.hero-animation-top .red-box,
+.hero-animation-bottom .red-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-tiktok-red);
+  z-index: 1;
+}
+
+.hero-animation-top .blue-box,
+.hero-animation-bottom .blue-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-tiktok-blue);
+  z-index: 2;
 }
 
 /* #Grow
