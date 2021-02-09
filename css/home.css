@@ -84,15 +84,54 @@
   z-index: 2;
 }
 
+.hero-arrow {
+  position: absolute;
+  bottom: 2%;
+  left: 4%;
+}
+
+.hero-arrow img {
+  width: 4vw;
+}
+
+@media (max-width: 1023.98px) {
+  .hero-video-text {
+    width: 70%;
+  }
+
+  .hero-video-text h2 {
+    font-size: 6.4vw!important;
+    margin-bottom: 10vw;
+  }
+
+  .hero-video-text a,
+  .hero-video-text button {
+    font-size: 5.85vw!important;
+    height: 13.3vw;
+  }
+
+  .hero-arrow {
+    position: absolute;
+    bottom: 9.3vw;
+    left: 8vw;
+  }
+
+  .hero-arrow img {
+    width: 7.2vw;
+  }
+}
+
 /* #Grow
 ================================================== */
 .grow {
   position: relative;
   text-align: center;
+  overflow: hidden;
 }
 
 .grow .bg-img,
-.grow .bg-img img {
+.grow .bg-img img,
+.grow .bg-img picture {
   width: 100%;
 }
 
@@ -121,6 +160,40 @@
 
 .grow p:last-of-type {
   line-height: 1.4;
+}
+
+@media (max-width: 1023.98px) {
+  .grow .container {
+    width: 85%;
+    position: static;
+    transform: none;
+    padding: 18.6vw 0 24vw 0;
+  }
+
+  .grow h1 {
+    margin: 0 auto 17.3vw auto;
+    max-width: 100%;
+  }
+
+  .grow p:first-of-type {
+    margin-bottom: 8vw;
+  }
+
+  .grow .bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .grow .bg-img img,
+  .grow .bg-img picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 /* #How To
@@ -153,6 +226,33 @@
 .how-to p {
   line-height: 1.25;
   margin-bottom: 2.6vw;
+}
+
+@media (max-width: 1023.98px) {
+  .how-to {
+    text-align: center;
+    padding: 13.3vw 0;
+  }
+
+  .how-to .container {
+    max-width: 85%;
+  }
+
+  .how-to h2 {
+    margin-bottom: 13.3vw;
+  }
+
+  .how-to .media-block {
+    display: block;
+  }
+  
+  .how-to video {
+    margin-bottom: 10vw;
+  }
+
+  .how-to p {
+    margin-bottom: 10vw;
+  }
 }
 
 /* #Why
@@ -194,6 +294,56 @@
   line-height: 1.8;
 }
 
+@media (max-width: 1023.98px) {
+  .why {
+    padding: 13.3vw 0;
+  }
+
+  .why .container {
+    width: 85%;
+    position: static;
+    transform: none;
+  }
+
+  .why-grid {
+    display: block;
+  }
+
+  .why h2 {
+    margin-bottom: 13.3vw;
+    color: black!important;
+  }
+  
+  .why h3 {
+    margin-bottom: 2.5vw;
+    color: black!important;
+  }
+
+  .why p {
+    line-height: 1.3;
+  }
+
+  .why li:not(:last-child) {
+    margin-bottom: 10.5vw;
+  }
+
+  .why li:nth-child(3) {
+    background-color: var(--color-tiktok-red);
+    color: white!important;
+    border-radius: 5.3vw;
+    padding: 8vw 4vw;
+  }
+
+  .why li:nth-child(3) h3 {
+    color: white!important;
+  }
+
+  .why .bg-img {
+    display: none;
+  }
+
+}
+
 /* #Get Inspired
 ================================================== */
 .get-inspired {
@@ -216,7 +366,8 @@
   border-radius: 20px;
 }
 
-.get-inspired .swiper-container img {
+.get-inspired .swiper-container img,
+.get-inspired .swiper-container picture {
   width: 100%;
 }
 
@@ -236,6 +387,38 @@
   left: 12%;
 }
 
+@media (max-width: 1023.98px) {
+  .get-inspired {
+    padding: 13.3vw 0 10.6vw 0;
+  }
+
+  .get-inspired h2 {
+    margin-bottom: 10.6vw;
+  }
+
+  .get-inspired .slider {
+    margin-bottom: 10.6vw;
+  }
+
+  .get-inspired .swiper-slide {
+    padding: 0 4.6vw;
+  }
+
+  .get-inspired .swiper-container img,
+  .get-inspired .swiper-container picture {
+    border-radius: 5.33vw;
+  }
+
+  .get-inspired .swiper-navigation {
+    display: none;
+  }
+
+  .get-inspired .swiper-container {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
 /* #News
 ================================================== */
 .news {
@@ -248,43 +431,80 @@
   margin-bottom: 5.2vw;
 }
 
-.news .slider {
+.news ul {
   text-align: right;
   margin: 0 auto 5.2vw auto;
   width: 78%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.news .swiper-slide {
-  height: auto;
+.news li {
+  height: 100%;
 }
 
-.news .swiper-slide a {
+.news li a {
   display: flex;
   height: 100%;
 }
 
-.news .swiper-slide .img {
+.news li .img {
   flex: 0 0 40%;
 }
 
-.news .swiper-slide .img img {
+.news li .img img {
   width: 100%;
   height: 100%;
 }
 
-.news .swiper-slide .text {
+.news li .text {
   max-width: 10.4vw;
   padding-right: 1vw;
   display: flex;
   flex-direction: column;
 }
 
-.news .swiper-slide .text p:first-child {
+.news li .text p:first-child {
   margin-bottom: 1.45vw;
 }
 
-.news .swiper-slide .text p:last-child {
+.news li .text p:last-child {
   margin-top: auto;
+}
+
+@media (max-width: 1023.98px) {
+  .news {
+    padding: 13.3vw 0;
+  }
+
+  .news ul {
+    margin: 0 auto 13.3vw auto;
+    width: 85%;
+  
+    display: block;
+  }
+  
+  .news li:not(:last-child) {
+    margin-bottom: 13.3vw;
+  }
+
+  .news li .img {
+    flex: 0 0 50%;
+  }
+
+  .news li .text {
+    max-width: 100%;
+    padding-right: 5.3vw;
+  }
+
+  .news li .text p {
+    line-height: 1;
+  }
+
+  .news li .text p:first-child {
+    margin-bottom: 5.3vw;
+  }
 }
 
 /* #Start
@@ -301,6 +521,17 @@
   margin: 2.35vw auto;
 }
 
+@media (max-width: 1023.98px) {
+  .start {
+    padding: 17.3vw 0;
+  }
+
+  .start p {
+    width: 80%;
+    margin: 10.6vw auto;
+  }
+}
+
 /* #Subscribe
 ================================================== */
 .subscribe {
@@ -313,7 +544,7 @@
   margin-bottom: 1.8vw;
 }
 
-.subscribe .form input {
+.subscribe .form input[type="text"] {
   height: 3.125vw;
   width: 32.2vw;
   margin-left: 1.56vw;
@@ -324,10 +555,40 @@
   transition: all .3s ease;
 }
 
-.subscribe .form input:focus {
+.subscribe .form input[type="text"]:focus {
   box-shadow: inset 0 0 1px 1px black;
 }
 
-.subscribe .form input::placeholder {
+.subscribe .form input[type="text"]::placeholder {
   color: black;
+}
+
+@media (max-width: 1023.98px) {
+  .subscribe {
+    padding: 13.3vw 0;
+  }
+
+  .subscribe .container {
+    width: 85%;
+  }
+
+  .subscribe p {
+    margin-bottom: 8vw;
+  }
+
+  .subscribe .form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .subscribe .form input[type="text"] {
+    height: 13.3vw;
+    width: 100%;
+    margin-left: 0;
+    font-size: 5.85vw!important;
+    border-radius: 5.33vw;
+    padding: 0 2vw;
+    margin-bottom: 2.66vw;
+    text-align: center;
+  }
 }

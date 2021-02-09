@@ -32,7 +32,7 @@
         <img src="img/icons/hamburger.svg" alt="menu-icon">
       </div>
       <!-- Links -->
-      <ul class="header-links f-d-2">
+      <ul class="header-links f-d-2 f-m-2">
         <li>
           <a href="#">
             םיקסעל TikTok
@@ -75,13 +75,22 @@
   <section class="hero">
     <div class="container">
       <div class="hero-video hero-video-1">
-        <video autoplay loop muted playsinline preload="metadata">
+        <video autoplay loop muted playsinline preload="metadata" class="d-desktop">
           <source src="video/home-hero-1.mp4" type="video/mp4">
         </video>
+        <video autoplay loop muted playsinline preload="metadata" class="d-mobile">
+          <source src="video/home-hero-1-mobile.mp4" type="video/mp4">
+        </video>
+        <div class="hero-arrow">
+          <img src="img/icons/arrow-down-red.svg" alt="arrow-down">
+        </div>
       </div>
       <div class="hero-video hero-video-2">
-        <video autoplay loop muted playsinline preload="metadata">
+        <video autoplay loop muted playsinline preload="metadata" class="d-desktop">
           <source src="video/home-hero-2.mp4" type="video/mp4">
+        </video>
+        <video autoplay loop muted playsinline preload="metadata" class="d-mobile">
+          <source src="video/home-hero-2-mobile.mp4" type="video/mp4">
         </video>
         <div class="hero-video-text">
           <h2 class="f-d-5 medium">,םירצק הכרדה ינוטרס םכרובע ונכה
@@ -92,6 +101,9 @@
           </h2>
           <button class="btn btn-primary btn-rounded f-d-3">ליחתנ ואוב</button>
         </div>
+        <div class="hero-arrow">
+          <img src="img/icons/arrow-down-red.svg" alt="arrow-down">
+        </div>
       </div>
     </div>
   </section>
@@ -99,13 +111,13 @@
   <!-- Grow -->
   <section class="grow">
     <div class="container">
-      <h1 class="f-d-6">Grow your brand with TikTok</h1>
-      <p class="f-d-5 demi-bold">
+      <h1 class="f-d-6 f-m-6">Grow your brand with TikTok</h1>
+      <p class="f-d-5 f-m-4 demi-bold">
         תרשפאמש ,רצק ןכותל םלועב תחמוצהו הליבומה המרופטלפה איה TikTok
         .םהלש תויטנתואהו תויתריציל יוטיב תתל ליג לכבו םוקמ לכמ םירוטייאירקל
         !םלשומש המ הזו -םלשומ תויהל בייח אל שממ ןכותה
       </p>
-      <p class="f-d-4 medium">
+      <p class="f-d-4 f-m-4 medium">
         ןמזה עיגהו ןאכ רבכ םכלש להקה ,יתנוכש קסע וא ימואלניב גתומ םתא םא הנשמ אל זא
         ןכות רצייל םיליחתמו ״תמוסרפ״ לע בושחל םיקיספמ ?הז תא םישוע ךיא .ופרטצתש
         .המרופטלפב תיעבט הרוצתב בלתשמו םיאתמש
@@ -113,14 +125,17 @@
       </p>
     </div>
     <div class="bg-img">
-      <img src="img/home/grow-bg.gif" alt="bg-img">
+      <picture>
+        <source media="(min-width:1024px)" srcset="img/home/grow-bg.gif">
+        <img src="img/home/grow-bg-mobile.jpg" alt="bg-img">
+      </picture>
     </div>
   </section>
 
   <!-- How To -->
   <section class="how-to">
     <div class="container">
-      <h2 class="f-d-6">?How to TikTok</h2>
+      <h2 class="f-d-6 f-m-6">?How to TikTok</h2>
       <div class="media-block">
         <!-- Video -->
         <div class="video">
@@ -130,7 +145,7 @@
         </div>
         <!-- Text -->
         <div class="text">
-          <p class="f-d-5 medium">,םירצק הכרדה ינוטרס םכרובע ונכה
+          <p class="f-d-5 f-m-3 medium">,םירצק הכרדה ינוטרס םכרובע ונכה
             תחראמ ןגד הימ הדיחיהו תחאה םהב
             TikTok-מ תווצ ירבחו םירוטייאירק
             תא ךפוה המ םכל רפסל תנמ לע ,לארשי
@@ -146,14 +161,14 @@
   <!-- Why -->
   <section class="why">
     <div class="container">
-      <h2 class="f-d-6 text-red">?Why TikTok</h2>
+      <h2 class="f-d-6 f-m-6 text-red">?Why TikTok</h2>
       <ul class="why-grid">
         <!-- Item -->
         <li>
-          <h3 class="f-d-4 text-red">
+          <h3 class="f-d-4 f-m-4 text-red">
             Everyone’s here
           </h3>
-          <p class="f-d-2">
+          <p class="f-d-2 f-m-2">
             םויכו תופש 57-ב הנימז ,תונידמ 150-ב הליעפ TikTok
             .םלועב םינופטראמס הברה יכה לע ואדיוה תיצקילפא איה
             םיענומ היגרנאהו ןוטהש ןמזבו ,םיאליג תצוח המרופטלפה
@@ -163,10 +178,10 @@
         </li>
         <!-- Item -->
         <li>
-          <h3 class="f-d-4">
+          <h3 class="f-d-4 f-m-4">
             Creative expression
           </h3>
-          <p class="f-d-2">
+          <p class="f-d-2 f-m-2">
             הקלחש ,הליהקה לש קלדה םה תויתריציו יוטיב
             .םייביסאפ םיפוצ קר אלו ןכות ינרצי תויהל רחוב לודגה
             םירצויהו ונלש תוברתהמ קלח אוה co-creation
@@ -176,10 +191,10 @@
         </li>
         <!-- Item -->
         <li>
-          <h3 class="f-d-4">
+          <h3 class="f-d-4 f-m-4">
             Cultural Impact
           </h3>
-          <p class="f-d-2">
+          <p class="f-d-2 f-m-2">
             .TikTok-ב קר ראשנ אל ,TikTok-ב ליחתמש המ
             ,הבחר הפישחבו תומרופטלפה לכל עיגמ ונלש ןכותה
             .םירטסניימה לע עיפשמו םידנרט רציימ ךכמ האצותכו
@@ -189,10 +204,10 @@
         </li>
         <!-- Item -->
         <li>
-          <h3 class="f-d-4">
+          <h3 class="f-d-4 f-m-4">
             Content first
           </h3>
-          <p class="f-d-2">
+          <p class="f-d-2 f-m-2">
             !שדח יוטיב תלבקמ ״ךלמה אוה ןכות״ האשילקה
             – םיקיילו םיבקוע ירחא ףודרל ךירצ אל רבכ גתומה
             .יטנוולרה להקל עיגי אוה ןיינעמ םכלש ןכותה םא
@@ -202,10 +217,10 @@
         </li>
         <!-- Item -->
         <li>
-          <h3 class="f-d-4">
+          <h3 class="f-d-4 f-m-4">
             Sound on
           </h3>
-          <p class="f-d-2">
+          <p class="f-d-2 f-m-2">
             איה הקיזומו ןוא דנואס תמרופטלפ איה TikTok
             התוא ךפוה םגש המ ,היווחב יתועמשמ טנמלא
             םיללוג אל ונלש םישמתשמה בור ,First screen-ל
@@ -215,10 +230,10 @@
         </li>
         <!-- Item -->
         <li>
-          <h3 class="f-d-4">
+          <h3 class="f-d-4 f-m-4">
             A full screen experiance
           </h3>
-          <p class="f-d-2">
+          <p class="f-d-2 f-m-2">
             TikTok לש (יכנא) ילקיטרוה טמרופה
             ןגנתהל םכלש גתומה ינוטרסל רשפאמ
             .תעד תוחסה וא תורחת לכ אלל אלמ ךסמ לע
@@ -236,17 +251,23 @@
   <!-- Get Inspired -->
   <section class="get-inspired">
     <div class="container">
-      <h2 class="f-d-6">Get inspired</h2>
+      <h2 class="f-d-6 f-m-6">Get inspired</h2>
       <div class="slider">
         <div class="swiper-container">
           <div class="swiper-wrapper">
             <!-- Slide -->
             <div class="swiper-slide">
-              <img src="img/home/get-inspired-1.jpg" alt="get-inspired">
+              <picture>
+                <source media="(min-width:1024px)" srcset="img/home/get-inspired-1.jpg">
+                <img src="img/home/get-inspired-1-mobile.jpg" alt="get-inspired">
+              </picture>
             </div>
             <!-- Slide -->
             <div class="swiper-slide">
-              <img src="img/home/get-inspired-2.jpg" alt="get-inspired">
+              <picture>
+                <source media="(min-width:1024px)" srcset="img/home/get-inspired-2.jpg">
+                <img src="img/home/get-inspired-2-mobile.jpg" alt="get-inspired">
+              </picture>
             </div>
           </div>
         </div>
@@ -264,76 +285,72 @@
   <!-- News -->
   <section class="news">
     <div class="container">
-      <h2 class="f-d-6">?What’s new</h2>
-      <div class="slider">
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <!-- Slide -->
-            <div class="swiper-slide">
-              <a href="#">
-                <div class="img">
-                  <img src="img/home/post-1.jpg" alt="post-img">
-                </div>
-                <div class="text">
-                  <p class="f-d-2">
-                    םיקסעל
-                  </p>
-                  <p class="f-d-3 bold">
-                    םיקסעל קוטקיט
-                    באה-רתא הקישמ
-                    םיגתומלו םירצויל
-                  </p>
-                  <p class="f-d-2 medium">
-                    םיקסעל קוטקיט
-                  </p>
-                </div>
-              </a>
+      <h2 class="f-d-6 f-m-6">?What’s new</h2>
+      <ul>
+        <!-- Item -->
+        <li>
+          <a href="#">
+            <div class="img">
+              <img src="img/home/post-1.jpg" alt="post-img">
             </div>
-            <!-- Slide -->
-            <div class="swiper-slide">
-              <a href="#">
-                <div class="img">
-                  <img src="img/home/post-2.jpg" alt="post-img">
-                </div>
-                <div class="text">
-                  <p class="f-d-2">
-                    הטאד
-                  </p>
-                  <p class="f-d-3 bold">
-                    תמסרפמ קוטקיט
-                    םוסרפה ינותנ תא
-                    ינמרגה להקב
-                  </p>
-                  <p class="f-d-2 medium">
-                    לארשי קוטקיט
-                  </p>
-                </div>
-              </a>
+            <div class="text">
+              <p class="f-d-2 f-m-1">
+                םיקסעל
+              </p>
+              <p class="f-d-3 f-m-4 bold">
+                םיקסעל קוטקיט
+                באה-רתא הקישמ
+                םיגתומלו םירצויל
+              </p>
+              <p class="f-d-2 f-m-1 medium">
+                םיקסעל קוטקיט
+              </p>
             </div>
-            <!-- Slide -->
-            <div class="swiper-slide">
-              <a href="#">
-                <div class="img">
-                  <img src="img/home/post-3.jpg" alt="post-img">
-                </div>
-                <div class="text">
-                  <p class="f-d-2">
-                    ךליבשב
-                  </p>
-                  <p class="f-d-3 bold">
-                    תא וריכה
-                    םירוטאירקה
-                    ונלש
-                  </p>
-                  <p class="f-d-2 medium">
-                    ןגד הימ
-                  </p>
-                </div>
-              </a>
+          </a>
+        </li>
+        <!-- Item -->
+        <li>
+          <a href="#">
+            <div class="img">
+              <img src="img/home/post-2.jpg" alt="post-img">
             </div>
-          </div>
-        </div>
-      </div>
+            <div class="text">
+              <p class="f-d-2 f-m-1">
+                הטאד
+              </p>
+              <p class="f-d-3 f-m-4 bold">
+                תמסרפמ קוטקיט
+                םוסרפה ינותנ תא
+                ינמרגה להקב
+              </p>
+              <p class="f-d-2 f-m-1 medium">
+                לארשי קוטקיט
+              </p>
+            </div>
+          </a>
+        </li>
+        <!-- Item -->
+        <li>
+          <a href="#">
+            <div class="img">
+              <img src="img/home/post-3.jpg" alt="post-img">
+            </div>
+            <div class="text">
+              <p class="f-d-2 f-m-1">
+                ךליבשב
+              </p>
+              <p class="f-d-3 f-m-4 bold">
+                תא וריכה
+                םירוטאירקה
+                ונלש
+              </p>
+              <p class="f-d-2 f-m-1 medium">
+                ןגד הימ
+              </p>
+            </div>
+          </a>
+        </li>
+      </ul>
       <a href="#" class="btn btn-tertiary">םינוכדע דועל</a>
     </div>
   </section>
@@ -341,8 +358,8 @@
   <!-- Start -->
   <section class="start">
     <div class="container">
-      <h2 class="f-d-6">?Ready to Start</h2>
-      <p class="f-d-5">ןיבהל ידכ ונילא הנפ ,דואמ םינווגמ ונלש םייקסעה תונורתפה
+      <h2 class="f-d-6 f-m-6">?Ready to Start</h2>
+      <p class="f-d-5 f-m-4">ןיבהל ידכ ונילא הנפ ,דואמ םינווגמ ונלש םייקסעה תונורתפה
         ךילהתב בלש לכב ךל רוזענ ונחנא ,ךלש גתומל ץלוממ המ</p>
       <a href="#" class="btn btn-tertiary btn-large">גיצנ םע רשק רוצ</a>
     </div>
@@ -351,7 +368,7 @@
   <!-- Subscribe -->
   <section class="subscribe">
     <div class="container">
-      <p class="f-d-5 demi-bold">TikTok לש תונורחאה תושדחל םשרה</p>
+      <p class="f-d-5 f-m-4 demi-bold">TikTok לש תונורחאה תושדחל םשרה</p>
       <form class="form">
         <input type="text" class="f-d-4" name="subscribeEmail" id="subscribeEmail" placeholder="ליימיא">
         <button type="submit" class="btn btn-secondary">המשרהל</button>
@@ -395,7 +412,7 @@
             </li>
           </ul>
         </div>
-        <div class="footer-links f-d-2">
+        <div class="footer-links f-d-2 f-m-1">
           <!-- Group -->
           <ul class="footer-links-group">
             <li class="bold">
@@ -500,7 +517,7 @@
       </div>
       <!-- Bottom -->
       <div class="footer-bottom">
-        <p class="f-d-1">
+        <p class="f-d-1 f-m-1">
           !מאי מאי ,<a href="#">עדימ דוע שי הפ</a> .רתוי הקלח היווחל תויגועב םישמתשמ ונחנא
         </p>
       </div>

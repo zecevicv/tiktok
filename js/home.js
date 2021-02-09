@@ -68,17 +68,29 @@ ScrollTrigger.create({
     goToSection(heroVideo2, 1);
     heroAnimationBottom.restart();
     gsap.to('.hero-video-1 video', { opacity: 0, delay: .5 });
+    if (window.innerWidth < 1024) {
+      body.classList.add('no-scroll');
+      setTimeout(function() {
+        body.classList.remove('no-scroll');
+      }, 500);
+    }
   }
 });
 
 // Returning to video 1
 ScrollTrigger.create({
   trigger: heroVideo1,
-  end: "100% 2%",
+  end: "100% 5%",
   onEnterBack: () => { 
     goToSection(heroVideo1, 1);
     heroAnimationTop.restart();
     gsap.to('.hero-video-1 video', { opacity: 1, delay: .5 });
+    if (window.innerWidth < 1024) {
+      body.classList.add('no-scroll');
+      setTimeout(function() {
+        body.classList.remove('no-scroll');
+      }, 500);
+    }
   }
 });
 
@@ -88,6 +100,12 @@ ScrollTrigger.create({
   end: "100% 60%",
   onEnterBack: () => { 
     goToSection(heroVideo2, .5)
+    if (window.innerWidth < 1024) {
+      body.classList.add('no-scroll');
+      setTimeout(function() {
+        body.classList.remove('no-scroll');
+      }, 500);
+    }
   }
 });
 
@@ -102,15 +120,18 @@ window.addEventListener('load', () => {
     new Swiper(getInspiredSlider, {
       slidesPerView: 1,
       loop: true,
+      centeredSlides: false,
       autoplay: {
         delay: 2500,
       },
       breakpoints: {
         0: {
-          slidesPerView: 1
+          slidesPerView: 1.32,
+          centeredSlides: true
         },
         1024: {
-          slidesPerView: 1
+          slidesPerView: 1,
+          centeredSlides: false
         },
       },
       navigation: {
@@ -119,18 +140,4 @@ window.addEventListener('load', () => {
       },
     });
   }
-
-  // Home - News Slider
-  new Swiper('.news .swiper-container', {
-    slidesPerView: 3,
-    simulateTouch: false,
-    breakpoints: {
-      0: {
-        slidesPerView: 3
-      },
-      1024: {
-        slidesPerView: 3
-      },
-    },
-  });
 });
