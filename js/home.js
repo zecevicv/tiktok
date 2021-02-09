@@ -134,6 +134,9 @@ window.addEventListener('load', () => {
           centeredSlides: false
         },
       },
+      pagination: {
+        el: getInspiredSlider.closest('.slider').querySelector('.swiper-pagination'),
+      },
       navigation: {
         nextEl: getInspiredSlider.closest('.slider').querySelector('.swiper-button-next'),
         prevEl: getInspiredSlider.closest('.slider').querySelector('.swiper-button-prev'),

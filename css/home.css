@@ -91,12 +91,12 @@
 }
 
 .hero-arrow img {
-  width: 4vw;
+  width: 3.4vw;
 }
 
 @media (max-width: 1023.98px) {
   .hero-video-text {
-    width: 70%;
+    width: 85%;
   }
 
   .hero-video-text h2 {
@@ -136,7 +136,7 @@
 }
 
 .grow .container {
-  width: 58%;
+  width: 50%;
 
   position: absolute;
   top: 46%;
@@ -154,29 +154,22 @@
   line-height: 1.3;
 }
 
-.grow p:first-of-type {
-  margin-bottom: 2vw;
-}
-
-.grow p:last-of-type {
-  line-height: 1.4;
-}
-
 @media (max-width: 1023.98px) {
   .grow .container {
     width: 85%;
     position: static;
     transform: none;
-    padding: 18.6vw 0 24vw 0;
+    padding: 16vw 0 19.7vw 0;
   }
 
   .grow h1 {
-    margin: 0 auto 17.3vw auto;
+    margin: 0 auto 12.3vw auto;
     max-width: 100%;
   }
 
-  .grow p:first-of-type {
-    margin-bottom: 8vw;
+  .grow p span {
+    display: block;
+    margin-top: 6.66vw;
   }
 
   .grow .bg-img {
@@ -231,7 +224,7 @@
 @media (max-width: 1023.98px) {
   .how-to {
     text-align: center;
-    padding: 13.3vw 0;
+    padding: 12vw 0 16.8vw 0;
   }
 
   .how-to .container {
@@ -239,7 +232,7 @@
   }
 
   .how-to h2 {
-    margin-bottom: 13.3vw;
+    margin-bottom: 11.2vw;
   }
 
   .how-to .media-block {
@@ -252,6 +245,7 @@
 
   .how-to p {
     margin-bottom: 10vw;
+    line-height: 1.6;
   }
 }
 
@@ -260,19 +254,11 @@
 .why {
   text-align: center;
   position: relative;
+  padding: 5.2vw 0 6.25vw 0;
 }
 
 .why .container {
-  width: 88%;
-  position: absolute;
-  top: 48%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.why .bg-img,
-.why .bg-img img {
-  width: 100%;
+  width: 80%;
 }
 
 .why h2 {
@@ -284,14 +270,58 @@
   grid-template-columns: repeat(3, 1fr);
   column-gap: 10vw;
   row-gap: 5.25vw;
+  align-items: start;
+}
+
+.why li {
+  position: relative;
+}
+
+.why li:hover::before,
+.why li:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.why li::before,
+.why li::after {
+  content: '';
+  position: absolute;
+  width: 2.86vw;
+  height: 2.86vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease;
+}
+
+.why li::before {
+  bottom: 0;
+  left: 0;
+  background-image: url('../img/icons/bg-shape-1.svg');
+  transform: translate(-50%, 50%);
+}
+
+.why li::after {
+  top: 0;
+  right: 0;
+  background-image: url('../img/icons/bg-shape-2.svg');
+  transform: translate(25%, -25%);
+}
+
+.why li:hover h3 {
+  color: var(--color-tiktok-red);
 }
 
 .why h3 {
   margin-bottom: 1vw;
+  transition: all .3s ease;
 }
 
 .why p {
-  line-height: 1.8;
+  line-height: 1.5;
 }
 
 @media (max-width: 1023.98px) {
@@ -301,22 +331,28 @@
 
   .why .container {
     width: 85%;
-    position: static;
-    transform: none;
   }
 
   .why-grid {
     display: block;
   }
 
+  .why li::before,
+  .why li::after {
+    display: none;
+  }
+
   .why h2 {
-    margin-bottom: 13.3vw;
-    color: black!important;
+    margin-bottom: 10.7vw;
   }
   
   .why h3 {
     margin-bottom: 2.5vw;
     color: black!important;
+  }
+
+  .why li:hover h3 {
+    color: black;
   }
 
   .why p {
@@ -327,21 +363,22 @@
     margin-bottom: 10.5vw;
   }
 
-  .why li:nth-child(3) {
-    background-color: var(--color-tiktok-red);
-    color: white!important;
-    border-radius: 5.3vw;
-    padding: 8vw 4vw;
+  .why li:nth-child(3)::before,
+  .why li:nth-child(3)::after {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    width: 9.3vw;
+    height: 9.3vw;
+  }
+
+  .why li:nth-child(3)::before {
+    transform: translate(-25%, 75%);
   }
 
   .why li:nth-child(3) h3 {
-    color: white!important;
+    color: var(--color-tiktok-red)!important;
   }
-
-  .why .bg-img {
-    display: none;
-  }
-
 }
 
 /* #Get Inspired
@@ -357,7 +394,7 @@
 }
 
 .get-inspired .slider {
-  margin-bottom: 3.65vw;
+  margin-bottom: 3.125vw;
   position: relative;
 }
 
@@ -387,6 +424,10 @@
   left: 12%;
 }
 
+.get-inspired .custom-pagination {
+  margin-top: 3.64vw;
+}
+
 @media (max-width: 1023.98px) {
   .get-inspired {
     padding: 13.3vw 0 10.6vw 0;
@@ -397,7 +438,7 @@
   }
 
   .get-inspired .slider {
-    margin-bottom: 10.6vw;
+    margin-bottom: 8vw;
   }
 
   .get-inspired .swiper-slide {
@@ -416,6 +457,10 @@
   .get-inspired .swiper-container {
     width: 100%;
     border-radius: 0;
+  }
+
+  .get-inspired .custom-pagination {
+    margin-top: 8.8vw;
   }
 }
 
@@ -475,7 +520,11 @@
 
 @media (max-width: 1023.98px) {
   .news {
-    padding: 13.3vw 0;
+    padding: 10.7vw 0 13.3vw 0;
+  }
+
+  .news h2 {
+    margin-bottom: 10.24vw;
   }
 
   .news ul {
@@ -528,7 +577,7 @@
 
   .start p {
     width: 80%;
-    margin: 10.6vw auto;
+    margin: 8vw auto 10.6vw auto;
   }
 }
 
@@ -544,13 +593,20 @@
   margin-bottom: 1.8vw;
 }
 
+.subscribe .form {
+  width: 36.5vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
 .subscribe .form input[type="text"] {
+  flex-grow: 1;
   height: 3.125vw;
-  width: 32.2vw;
-  margin-left: 1.56vw;
+  margin-left: 0.52vw;
   border: 1px solid black;
   color: black;
-  border-radius: 20px;
+  border-radius: 500px;
   padding-right: 1.5vw;
   transition: all .3s ease;
 }
@@ -563,13 +619,31 @@
   color: black;
 }
 
+.subscribe .form .top {
+  display: flex;
+  margin-bottom: 1.66vw;
+}
+
+.subscribe .form .bottom {
+  display: flex;
+  justify-content: center;
+}
+
+.subscribe .form .bottom p {
+  font-size: 0.83vw;
+}
+
+.subscribe .form .toggle-switch {
+  margin-left: 0.41vw;
+}
+
 @media (max-width: 1023.98px) {
   .subscribe {
     padding: 13.3vw 0;
   }
 
   .subscribe .container {
-    width: 85%;
+    width: 87%;
   }
 
   .subscribe p {
@@ -577,8 +651,12 @@
   }
 
   .subscribe .form {
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+  }
+
+  .subscribe .form .top {
+    display: block;
+    margin-bottom: 5.3vw;
   }
 
   .subscribe .form input[type="text"] {
@@ -586,9 +664,23 @@
     width: 100%;
     margin-left: 0;
     font-size: 5.85vw!important;
-    border-radius: 5.33vw;
     padding: 0 2vw;
     margin-bottom: 2.66vw;
     text-align: center;
+  }
+
+  .subscribe .form .btn {
+    width: 100%;
+  }
+
+  .subscribe .form .bottom p {
+    font-size: 3.5vw!important;
+    text-align: right;
+    font-weight: 400!important;
+    line-height: 1;
+  }
+
+  .subscribe .form .toggle-switch {
+    margin-left: 2.1vw;
   }
 }
