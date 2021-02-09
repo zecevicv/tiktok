@@ -607,6 +607,7 @@
   border: 1px solid black;
   color: black;
   border-radius: 500px;
+  padding-left: 1.5vw;
   padding-right: 1.5vw;
   transition: all .3s ease;
 }
