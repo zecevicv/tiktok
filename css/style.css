@@ -124,6 +124,12 @@ button {
   cursor: pointer;
 }
 
+input,
+textarea,
+button {
+  font-family: inherit;
+}
+
 /* #Utilities
 ================================================== */
 .container {
@@ -315,12 +321,14 @@ a,
 /* #Toggle Switch
 ================================================== */
 .toggle-switch {
-  display: flex;
+  display: inline-flex;
+  height: 1.04vw;
+  overflow: hidden;
 }
 
 .toggle-switch input[type=checkbox]{
-	height: 0;
-	width: 0;
+	height: 0!important;
+	width: 0!important;
 	visibility: hidden;
 }
 
@@ -339,7 +347,7 @@ a,
 	content: '';
 	position: absolute;
 	top: 50%;
-	left: 0.15vw;
+	right: 0.15vw;
 	width: 0.83vw;
 	height: 0.83vw;
 	background: var(--color-tiktok-red);
@@ -349,11 +357,15 @@ a,
 }
 
 .toggle-switch input:checked + label:after {
-	left: calc(100% - 0.15vw);
-	transform: translateX(-100%) translateY(-50%);
+	right: calc(100% - 0.15vw);
+	transform: translateX(100%) translateY(-50%);
 }
 
 @media (max-width: 1023.98px) {
+  .toggle-switch {
+    height: 6.4vw;
+  }
+
   .toggle-switch label {
     width: 11.5vw;
     height: 6.4vw;
@@ -496,12 +508,12 @@ a,
 @media (max-width: 1023.98px) {
   .header {
     background-color: transparent;
-    padding: 8vw 0;
+    padding: 4.8vw 0;
   }
 
   .header .container {
     max-width: 100%;
-    padding: 0 7.4vw;
+    padding: 0 7.4vw 0 4.2vw;
   }
 
   .header-hamburger {
@@ -516,9 +528,13 @@ a,
     display: none;
   }
 
+  .header-logo img {
+    width: 53.3vw;
+  }
+
   .header-links {
     position: fixed;
-    top: 25vw;
+    top: 18.6vw;
     right: 0;
     height: 100%;
     padding: 0 7.4vw;

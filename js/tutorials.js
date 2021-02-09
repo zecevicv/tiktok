@@ -1,21 +1,23 @@
 /* #Slider Initialization
   ======================================================= */
 window.addEventListener('load', () => {
-  // Video Slider
-  new Swiper('.video-slider .swiper-container', {
-    slidesPerView: 1.6,
-    centeredSlides: true,
-    watchOverflow: true,
-    grabCursor: true,
-    pagination: {
-      el: '.video-slider .swiper-pagination',
-      type: 'progressbar',
-    },
-    navigation: {
-      nextEl: '.video-slider .swiper-button-next',
-      prevEl: '.video-slider .swiper-button-prev',
-    },
-  });
+  if (window.innerWidth > 1024) {
+    // Video Slider
+    new Swiper('.video-slider .swiper-container', {
+      slidesPerView: 1.6,
+      centeredSlides: true,
+      watchOverflow: true,
+      grabCursor: true,
+      pagination: {
+        el: '.video-slider .swiper-pagination',
+        type: 'progressbar',
+      },
+      navigation: {
+        nextEl: '.video-slider .swiper-button-next',
+        prevEl: '.video-slider .swiper-button-prev',
+      },
+    });
+  }
 });
 
 /* #Module Functionality
@@ -46,6 +48,7 @@ const loadModuleHandler = (e) => {
   modules.classList.add('active');
   module.classList.add('active');
   moduleVideo.play();
+  moduleTopBar.classList.add('active');
 };
 
 // Close Module
