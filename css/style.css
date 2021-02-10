@@ -347,27 +347,19 @@ a,
 	content: '';
 	position: absolute;
 	top: 50%;
-	right: 0.15vw;
+	left: 0.15vw;
 	width: 0.83vw;
 	height: 0.83vw;
-	background: var(--color-tiktok-red);
+	background: rgb(97, 97, 97);
 	border-radius: 500px;
 	transition: 0.3s;
   transform: translateY(-50%);
 }
 
 .toggle-switch input:checked + label:after {
-	right: calc(100% - 0.15vw);
-	transform: translateX(100%) translateY(-50%);
-}
-
-.toggle-switch p {
-  opacity: .5;
-  transition: all .3s ease;
-}
-
-.toggle-switch input:checked ~ p {
-  opacity: 1;
+  background: var(--color-tiktok-red);
+	left: calc(100% - 0.15vw);
+	transform: translateX(-100%) translateY(-50%);
 }
 
 @media (max-width: 1023.98px) {
