@@ -6,12 +6,23 @@ gsap.registerPlugin(ScrollToPlugin);
 const heroVideo1 = document.querySelector('.hero-video-1');
 const heroVideo2 = document.querySelector('.hero-video-2');
 
+// Scroll To Section flag
+// To not trigger Animations
+// When scrolling to section
+let scrollToSection = false;
+
 // Go To Section
 function goToSection(section, duration) {
-  gsap.to(window, {
+  const scroll = gsap.timeline();
+
+  scroll.to(window, {
     scrollTo: {y: section, autoKill: false},
     duration: duration,
-    ease: Power4.easeOut
+    ease: Power4.easeOut,
+  });
+
+  scroll.eventCallback("onComplete", function() {
+    scrollToSection = false;
   });
 }
 
@@ -65,14 +76,16 @@ ScrollTrigger.create({
   trigger: heroVideo1,
   start: "100% 100%",
   onEnter: () => {
-    goToSection(heroVideo2, 1);
-    heroAnimationBottom.restart();
-    gsap.to('.hero-video-1 video', { opacity: 0, delay: .5 });
-    if (window.innerWidth < 1024) {
-      body.classList.add('no-scroll');
-      setTimeout(function() {
-        body.classList.remove('no-scroll');
-      }, 500);
+    if (!scrollToSection) {
+      goToSection(heroVideo2, 1);
+      heroAnimationBottom.restart();
+      gsap.to('.hero-video-1 video', { opacity: 0, delay: .5 });
+      if (window.innerWidth < 1024) {
+        body.classList.add('no-scroll');
+        setTimeout(function() {
+          body.classList.remove('no-scroll');
+        }, 500);
+      }
     }
   }
 });
@@ -82,14 +95,16 @@ ScrollTrigger.create({
   trigger: heroVideo1,
   end: "100% 5%",
   onEnterBack: () => { 
-    goToSection(heroVideo1, 1);
-    heroAnimationTop.restart();
-    gsap.to('.hero-video-1 video', { opacity: 1, delay: .5 });
-    if (window.innerWidth < 1024) {
-      body.classList.add('no-scroll');
-      setTimeout(function() {
-        body.classList.remove('no-scroll');
-      }, 500);
+    if (!scrollToSection) {
+      goToSection(heroVideo1, 1);
+      heroAnimationTop.restart();
+      gsap.to('.hero-video-1 video', { opacity: 1, delay: .5 });
+      if (window.innerWidth < 1024) {
+        body.classList.add('no-scroll');
+        setTimeout(function() {
+          body.classList.remove('no-scroll');
+        }, 500);
+      }
     }
   }
 });
@@ -99,13 +114,37 @@ ScrollTrigger.create({
   trigger: heroVideo2,
   end: "100% 60%",
   onEnterBack: () => { 
-    goToSection(heroVideo2, .5)
-    if (window.innerWidth < 1024) {
-      body.classList.add('no-scroll');
-      setTimeout(function() {
-        body.classList.remove('no-scroll');
-      }, 500);
+    if (!scrollToSection) {
+      goToSection(heroVideo2, .5)
+      if (window.innerWidth < 1024) {
+        body.classList.add('no-scroll');
+        setTimeout(function() {
+          body.classList.remove('no-scroll');
+        }, 500);
+      }
     }
+  }
+});
+
+// Header Links that should scroll to sections
+const scrollToGetInspired = document.querySelector('#scrollToGetInspired');
+const scrollToNews = document.querySelector('#scrollToNews');
+
+scrollToGetInspired.addEventListener('click', (e) => {
+  const getInspired = document.querySelector('.get-inspired');
+  if (getInspired) {
+    e.preventDefault();
+    scrollToSection = true;
+    goToSection(getInspired, 1);
+  }
+});
+
+scrollToNews.addEventListener('click', (e) => {
+  const news = document.querySelector('.news');
+  if (news) {
+    e.preventDefault();
+    scrollToSection = true;
+    goToSection(news, 1);
   }
 });
 

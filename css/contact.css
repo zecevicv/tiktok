@@ -33,6 +33,12 @@
   line-height: 1;
 }
 
+.hero .bg-img,
+.hero .bg-img img,
+.hero .bg-img picture {
+  width: 100%;
+}
+
 @media (max-width: 1023.98px) {
   .hero {
     padding-bottom: 0;
@@ -110,11 +116,14 @@
 }
 
 .contact .form-group-toggle {
-  display: flex;
   margin: 1.3vw 0;
 }
 
 .contact .form-group-toggle .toggle-switch {
+  display: flex;
+}
+
+.contact .form-group-toggle .toggle-switch label {
   flex-shrink: 0;
 }
 

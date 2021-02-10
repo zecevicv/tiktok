@@ -625,17 +625,18 @@
   margin-bottom: 1.66vw;
 }
 
-.subscribe .form .bottom {
+.subscribe .form .toggle-switch {
   display: flex;
   justify-content: center;
 }
 
-.subscribe .form .bottom p {
-  font-size: 0.83vw;
+.subscribe .form .toggle-switch label {
+  flex-shrink: 0;
 }
 
-.subscribe .form .toggle-switch {
-  margin-left: 0.41vw;
+.subscribe .form .bottom p {
+  font-size: 0.83vw;
+  margin-right: 0.41vw;
 }
 
 @media (max-width: 1023.98px) {
@@ -679,9 +680,6 @@
     text-align: right;
     font-weight: 400!important;
     line-height: 1;
-  }
-
-  .subscribe .form .toggle-switch {
-    margin-left: 2.1vw;
+    margin-right: 2.1vw;
   }
 }

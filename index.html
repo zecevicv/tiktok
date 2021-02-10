@@ -24,6 +24,12 @@
 
 <body>
 
+  <!-- Page Animation -->
+  <div class="page-animation">
+    <div class="red-box"></div>
+    <div class="blue-box"></div>
+  </div>
+
   <!-- Header -->
   <header class="header">
     <div class="container">
@@ -32,7 +38,13 @@
         <img src="img/icons/hamburger.svg" alt="menu-icon">
       </div>
       <!-- Links -->
-      <ul class="header-links f-d-2 f-m-2">
+      <ul class="header-links f-d-2 f-m-4">
+        <li class="mobile-header d-mobile">
+          <!-- Close -->
+          <div class="close-icon"></div>
+          <!-- Logo -->
+          <img src="img/icons/logo-black.svg" alt="logo">
+        </li>
         <li>
           <a href="#">
              TikTok לעסקים 
@@ -44,7 +56,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" id="scrollToGetInspired">
             השראה
           </a>
         </li>
@@ -54,7 +66,7 @@
           </a>
         </li>
          <li>
-          <a href="#">
+          <a href="#" id="scrollToNews">
             בלוג
           </a>
         </li>
@@ -68,10 +80,11 @@
             דברו איתנו
           </a>
         </li>
-       
-        
-        
-        
+        <li class="d-mobile">
+          <a href="#" class="btn btn-primary">
+            דברו איתנו
+          </a>
+        </li>
       </ul>
       <!-- Logo -->
       <div class="header-logo">
@@ -265,7 +278,7 @@ TikTok  פעילה ב150 מדינות ו- 75 שפות וקהל
   </section>
 
   <!-- Get Inspired -->
-  <section class="get-inspired">
+  <section class="get-inspired" id="getInspired">
     <div class="container">
       <h2 class="f-d-6 f-m-6">Get inspired</h2>
       <div class="slider">
@@ -302,7 +315,7 @@ TikTok  פעילה ב150 מדינות ו- 75 שפות וקהל
   </section>
 
   <!-- News -->
-  <section class="news">
+  <section class="news" id="news">
     <div class="container">
       <h2 class="f-d-6 f-m-6">?What’s new</h2>
       <ul>
@@ -399,8 +412,8 @@ TikTok  פעילה ב150 מדינות ו- 75 שפות וקהל
           <div class="toggle-switch">
             <input type="checkbox" id="toggleSwithc">
             <label for="toggleSwithc"></label>
+            <p class="f-m-1 medium">אני מסכים לקבל עדכונים ומידע פרסומי/שיווקי בדוא״ל (ניתן להסיר את פרטיך מרשימת התפוצה בכל עת)</p>
           </div>
-          <p class="f-m-1 medium">אני מסכים לקבל עדכונים ומידע פרסומי/שיווקי בדוא״ל (ניתן להסיר את פרטיך מרשימת התפוצה בכל עת)</p>
         </div>
       </form>
     </div>
@@ -515,6 +528,7 @@ TikTok  פעילה ב150 מדינות ו- 75 שפות וקהל
           
           אנחנו משתמשים בעוגיות לחוויה חלקה יותר. <a href="#">פה יש עוד מידע</a>, יאמ יאמ!
         </p>
+        <p class="credit"><img src="img/icons/firetlv-logo.svg" alt="logo"> concept and design by</p>
       </div>
     </div>
   </footer>

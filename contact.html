@@ -24,7 +24,13 @@
 
 <body>
 
- <!-- Header -->
+  <!-- Page Animation -->
+  <div class="page-animation">
+    <div class="red-box"></div>
+    <div class="blue-box"></div>
+  </div>
+
+  <!-- Header -->
   <header class="header">
     <div class="container">
       <!-- Hamburger -->
@@ -32,10 +38,16 @@
         <img src="img/icons/hamburger.svg" alt="menu-icon">
       </div>
       <!-- Links -->
-      <ul class="header-links f-d-2 f-m-2">
+      <ul class="header-links f-d-2 f-m-4">
+        <li class="mobile-header d-mobile">
+          <!-- Close -->
+          <div class="close-icon"></div>
+          <!-- Logo -->
+          <img src="img/icons/logo-black.svg" alt="logo">
+        </li>
         <li>
           <a href="#">
-             TikTok לעסקים 
+            TikTok לעסקים
           </a>
         </li>
         <li>
@@ -44,7 +56,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" id="scrollToGetInspired">
             השראה
           </a>
         </li>
@@ -53,12 +65,12 @@
             אפשרויות פרסום
           </a>
         </li>
-         <li>
-          <a href="#">
+        <li>
+          <a href="#" id="scrollToNews">
             בלוג
           </a>
         </li>
-         <li>
+        <li>
           <a href="#">
             עסקים קטנים
           </a>
@@ -68,10 +80,11 @@
             דברו איתנו
           </a>
         </li>
-       
-        
-        
-        
+        <li class="d-mobile">
+          <a href="#" class="btn btn-primary">
+            דברו איתנו
+          </a>
+        </li>
       </ul>
       <!-- Logo -->
       <div class="header-logo">
@@ -132,16 +145,137 @@
           <div class="toggle-switch">
             <input type="checkbox" id="toggleSwithc">
             <label for="toggleSwithc"></label>
+            <p class="medium">דיינל SMS-ב וא ל״אודב TikTok-מ יקוויש רמוח וא/ו רוויד תלבק ת/רשאמ ינא</p>
           </div>
-          <p class="medium">דיינל SMS-ב וא ל״אודב TikTok-מ יקוויש רמוח וא/ו רוויד תלבק ת/רשאמ ינא</p>
         </div>
         <input class="btn btn-primary" type="submit" value="חלש">
       </form>
     </div>
   </div>
 
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <!-- Top -->
+      <div class="footer-top">
+        <div class="footer-contact">
+          <div class="footer-logo">
+            <img src="img/icons/logo.svg" alt="logo">
+          </div>
+          <ul class="footer-social">
+            <!-- Item -->
+            <li>
+              <a href="#">
+                <img src="img/icons/li.png" alt="linkedin">
+              </a>
+            </li>
+            <!-- Item -->
+            <li>
+              <a href="#">
+                <img src="img/icons/ig.png" alt="instagram">
+              </a>
+            </li>
+            <!-- Item -->
+            <li>
+              <a href="#">
+                <img src="img/icons/tw.png" alt="twitter">
+              </a>
+            </li>
+            <!-- Item -->
+            <li>
+              <a href="#">
+                <img src="img/icons/fb.png" alt="facebook">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-links f-d-2 f-m-1">
+          <!-- Group -->
+          <ul class="footer-links-group">
+            <li class="bold">
+              כלים
+            </li>
+            <li>
+              <a href="#">
+                מערכת פרסום עצמי
+              </a>
+            </li>
+           
+          </ul>
+          <!-- Group -->
+          <ul class="footer-links-group">
+            <li class="bold">
+              חברה
+            </li>
+            <li>
+              <a href="#">
+                help center
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                צור קשר
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                קריירה
+              </a>
+            </li>
+          </ul>
+          <!-- Group -->
+          <ul class="footer-links-group">
+            <li class="bold">
+              משפטי
+            </li>
+            <li>
+              <a href="#">
+                מדיניות עוגיות
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                קניין רוחני
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                כללים והנחיות
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                מדניות פרטיות
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                תנאים והגבלות
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Bottom -->
+      <div class="footer-bottom">
+        <p class="f-d-1 f-m-1">
+          
+          אנחנו משתמשים בעוגיות לחוויה חלקה יותר. <a href="#">פה יש עוד מידע</a>, יאמ יאמ!
+        </p>
+        <p class="credit"><img src="img/icons/firetlv-logo.svg" alt="logo"> concept and design by</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Hero Animation -->
+  <div class="hero-animation-bottom">
+    <div class="red-box"></div>
+    <div class="blue-box"></div>
+  </div>
+
   <!-- Script (vendor) -->
   <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/gsap.min.js"></script>
 
   <!-- Script -->
   <script src="js/app.js"></script>
