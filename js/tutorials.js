@@ -24,7 +24,7 @@ window.addEventListener('load', () => {
   ======================================================= */
 const preLoadModuleBtns = document.querySelectorAll('.video-slider .btn');
 const moduleTopBar = document.querySelector('.module-top-bar');
-const closeModuleBtn = document.querySelector('.close-icon');
+const closeModuleBtn = document.querySelector('.modules .close-icon');
 const modules = document.querySelector('.modules');
 const videoSlider = document.querySelector('.video-slider .swiper-container');
 const playVideoBtns = document.querySelectorAll('.video-play');
